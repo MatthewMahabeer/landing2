@@ -1,8 +1,30 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
+import { useRef } from 'react'
 
 export default function Home() {
+  const detailRef = useRef(null);
+  const requirementRef = useRef(null);
+  const applyRef = useRef(null);
+  const contactRef = useRef(null);
+  const aboutRef = useRef(null);
+  const scrollToDetail = () => {
+    detailRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
+  const scrollToRequirement = () => {
+    requirementRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
+  const scrollToApply = () => {
+    applyRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
+  const scrollToContact = () => {
+    contactRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
+  const scrollToAbout = () => {
+    aboutRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div className='page'>
       <div className='nav-con'>
@@ -10,11 +32,11 @@ export default function Home() {
           <Image src='/logo.png' width={100} height={50} />
         </div>
         <div className='tags-con'>
-          <p>Details</p>
-          <p>Requirements</p>
-          <p>Apply</p>
-          <p>Contact Us</p>
-          <p>About Mr. Lue-Fung</p>
+          <p onClick={scrollToDetail} style={{ cursor: 'pointer' }}>Details</p>
+          <p onClick={scrollToRequirement} style={{ cursor: 'pointer' }}>Requirements</p>
+          <p onClick={scrollToApply} style={{ cursor: 'pointer' }}>Apply</p>
+          <p onClick={scrollToContact} style={{ cursor: 'pointer' }}>Contact Us</p>
+          <p onClick={scrollToAbout} style={{ cursor: 'pointer' }}>About Mr. Lue-Fung</p>
         </div>
       </div>
       <div className='main-banner-container'>
@@ -26,7 +48,7 @@ export default function Home() {
           <p>This scholarship is designed to give a deserving person in need, access to this life-changing career path through formal training and work experience.</p>
         </div>
       </div>
-      <div className='right-container' style={{ height: "40rem" }}>
+      <div ref={detailRef} className='right-container' style={{ height: "40rem" }}>
         <div className='title-box'>Details</div>
         <img className='right-img' src="/second-from-top.jpg" />
         <div className='detail-container'>
@@ -43,7 +65,7 @@ export default function Home() {
           <p>Includes an internship within the TGL Group which will allow recipients to immediately apply their knowledge within a professional setting while building their resume to jump-start their career. </p>
         </div>
       </div>
-      <div className='left-container' style={{ height: "30rem" }}>
+      <div ref={requirementRef} className='left-container' style={{ height: "30rem" }}>
         <div className='title-box'>Requirements</div>
         <img className='right-img' src="/third-from-top-two.jpg" />
         <div className='list-box'>
@@ -67,7 +89,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className='right-container' style={{ height: "30rem" }}>
+      <div ref={applyRef} className='right-container' style={{ height: "30rem" }}>
         <div className='title-box'>Apply</div>
         <img className='right-img' src="/fourth-from-top.jpg" />
         <div className='small-detail-container'>
@@ -78,7 +100,7 @@ export default function Home() {
           <h1>{`(Subject line should be: DLF Scholarship Programme Application)`}</h1>
         </div>
       </div>
-      <div className='left-container' style={{ height: "20rem" }}>
+      <div ref={contactRef} className='left-container' style={{ height: "20rem" }}>
         <div className='title-box'>Contact Us</div>
         <img className='right-img' src="/fifth-from-top-two.jpg" />
         <div className='right-container'>
@@ -87,7 +109,7 @@ export default function Home() {
           <hr />
         </div>
       </div>
-      <div className='right-container' style={{ height: "30rem" }}>
+      <div ref={aboutRef} className='right-container' style={{ height: "30rem" }}>
         <div className='title-box'>About Mr. Lue-Fung</div>
         <img className='right-img' src="/sixth-from-top.jpg" />
         <div className='top-left-content-box'>
