@@ -35,7 +35,6 @@ export default function Home() {
 
         <div className='nav-con'>
           <div className='logo'>
-            <Image src='/logo.png' width={100} height={50} />
           </div>
           <div className='tags-con'>
             <p onClick={scrollToDetail} style={{ cursor: 'pointer' }}>Details</p>
@@ -116,12 +115,21 @@ export default function Home() {
           </div>
         </div>
         <div ref={aboutRef} className='right-container' style={{ height: "30rem" }}>
-          <div className='title-box'>About Mr. Lue-Fung</div>
+          <div className='title-box'>About Duane Lue-Fung</div>
           <img className='right-img' src="/sixth-from-top.jpg" />
           <div className='top-left-content-box'>
             <h1> Entrepreneur and Chairman of Think Grow Lead (TGL) Group.</h1>
             <hr />
-            <p>Mr. Lue-Fung loves to give back and most importantly believes in investing in one's future. This scholarship is a brainchild of his as he sees it as an avenue to not only strengthen the sales force of Jamaica but will aid in laying the building blocks for future sales enthusiasts.</p>
+            <p>
+              Duane Lue-Fung is the Founder and Chairman of Think Grow Lead.
+              <br />
+              The #1 Sales-force Development Experts and Trainers in the Caribbean.
+              <br />
+              He is an established entrepreneur with over 20 years of experience in
+              in creating and growing companies.
+              <br />
+              He rose to prominence as the young entrepreneur who grew a home-based business into a multi-million dollar copier and business solutions provider ranked in the top 5 across the Caribbean.
+            </p>
           </div>
           <img className='absolute-img' src="/abs-img-two.png" />
         </div>
