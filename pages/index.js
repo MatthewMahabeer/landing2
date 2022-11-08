@@ -41,7 +41,7 @@ export default function Home() {
             <p onClick={scrollToRequirement} style={{ cursor: 'pointer' }}>Requirements</p>
             <p onClick={scrollToApply} style={{ cursor: 'pointer' }}>Apply</p>
             <p onClick={scrollToContact} style={{ cursor: 'pointer' }}>Contact Us</p>
-            <p onClick={scrollToAbout} style={{ cursor: 'pointer' }}>About Mr. Lue-Fung</p>
+            <p onClick={scrollToAbout} style={{ cursor: 'pointer' }}>About Duane Lue-Fung</p>
           </div>
         </div>
         <div className='main-banner-container'>
