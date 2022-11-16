@@ -10,7 +10,7 @@ export default function Home() {
   const applyRef = useRef(null);
   const contactRef = useRef(null);
   const aboutRef = useRef(null);
-
+  const [isMobile, setIsMobile] = useState(false);
 
 
   const scrollToDetail = () => {
